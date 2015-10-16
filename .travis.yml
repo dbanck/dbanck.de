@@ -1,9 +1,18 @@
-sudo: false
-language: node_js
+language:
+  node_js
+sudo:
+  false
 node_js:
-  - iojs
-  - '0.12'
-  - '0.10'
-matrix:
-  allow_failures:
-    - node_js: iojs
+  - 0.10
+branches:
+  only:
+    - master
+env:
+  global:
+    secure: Xjm1I1tVWtEQfmmpDpio0/04MfcNHchwHBZg1BsIm5AcLUXssnm7oyA4ySVmEotXHkCN0pHSnptrKctgAGmOEEK2mX+BjMDdQ38lCDa8AWK876C1VXXP8Fhnc0opEfwIQWsrR/JOtxhml8rjFkFrYSBMpcdStl7mE9jEmG5Pe7qylKuuth++dODQuOq/4MOZ7A44m1Z4C72Y58MaFkE65cfzeZaknR2GIzbSIQchRn2kIoGFZI4bAxabKL5FbQrt2RvyhyFwHdAhsrOSZR7PDLy4pSlcpjPVgkf3sC7c26vsJ70LRXCTdFyJa2dZ+HGWsMhGS6jJpxhgFA5zsw4CzzljsdZVS+YYMXoF98JZzMENvtQaiihfdwziYkW+iTXsTS1kKAPk43g6afks6PJowd6NOTHJzrh/3CUYy6jSsiV3xYeRV/nDKmJ3XGLOv5tNkDeMowf1sBGb24Scv2LurFeO1pQ0y+7DS9Yh5rrFyPJgH5DHo55Jj525cgbkRbs1UGGa8e5wfdV2fyIYVQz4AAJwV0qXqdAhFMemdeClQYXTJHHH/PrGoc5SRyNSqvPK4DTl4wadDcnzB6bWEz6ouHs2Aa7pUWScyqG42zrakvcDQ8YFxeCOP+xwfAMBlGpixQ3bGEwELdxy7wIKeki7riZ+vnX6qXgJzoFqt4RieRg=
+before_script:
+  - npm install -g gulp
+script:
+  - gulp
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
