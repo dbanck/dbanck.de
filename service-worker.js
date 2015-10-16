@@ -24,7 +24,7 @@
 
 
 
-var PrecacheConfig = [["images/bg.jpg","1f885ec04169372f06e71faaf1375005"],["index.html","15e9e72a56dd19b435295cd36b900fa5"],["scripts/main.min.js","8d90633c807176a3b2ec61cfa7d8b948"],["styles/main.css","4ff9e660fd261e7ac21f4d4c5b0339b5"]];
+var PrecacheConfig = [["images/bg.jpg","1f885ec04169372f06e71faaf1375005"],["index.html","7967abef43e8d2c4f86795a0b9fa36c9"],["scripts/main.min.js","8d90633c807176a3b2ec61cfa7d8b948"],["styles/main.css","4ff9e660fd261e7ac21f4d4c5b0339b5"]];
 var CacheNamePrefix = 'sw-precache-v1-web-starter-kit-' + (self.registration ? self.registration.scope : '') + '-';
 
 
