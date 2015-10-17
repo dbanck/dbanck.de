@@ -57,6 +57,7 @@ gulp.task('images', () =>
 gulp.task('copy', () =>
   gulp.src([
     'app/*',
+    'CNAME',
     '!app/*.html',
   ], {
     dot: true
