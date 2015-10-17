@@ -3,11 +3,11 @@
 
 # TEAM
 
-  <name> -- <role> -- <twitter>
+  Daniel Banck -- @dbanck
 
 # THANKS
 
-  <name>
+  Web Starter Kit <https://github.com/google/web-starter-kit>
 
 # TECHNOLOGY COLOPHON
 
