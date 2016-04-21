@@ -3,7 +3,7 @@ language:
 sudo:
   false
 node_js:
-  - "0.12"
+  - "5"
 branches:
   only:
     - master
